@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "my-local-hello-mcp": {
+      "command": "python3",
+      "args": ["/app/hello_local_mcp_server.py"],
+      "env": {
+        "ANY_REQUIRED_KEY": "your_value"
+      }
+    }
+  }
+}

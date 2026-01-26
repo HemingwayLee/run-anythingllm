@@ -26,6 +26,8 @@ services:
       # you can find in the docker/.env.example file
     volumes:
       - anythingllm_storage:/app/server/storage
+      - ./my_hello_mcp/my_hello_mcp.json:/app/server/storage/plugins/anythingllm_mcp_servers.json
+      - ./my_hello_mcp/server.py:/app/hello_local_mcp_server.py
     restart: always
 
 volumes:
