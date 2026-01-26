@@ -7,7 +7,7 @@ docker pull mintplexlabs/anythingllm
 
 * run with my local docker-compose file
 ```
-docker-compose up
+docker-compose -f docker-compose.local.mcp.yml up
 ```
 
 ## How to use mcp server
