@@ -11,8 +11,19 @@ docker-compose up
 ```
 
 ## How to use mcp server
-* setup
+* setup local mcp server with json and put it into container using docker-compose.yml
 ```
+{
+  "mcpServers": {
+    "my-local-hello-mcp": {
+      "command": "python3",
+      "args": ["/app/hello_local_mcp_server.py"],
+      "env": {
+        "ANY_REQUIRED_KEY": "your_value"
+      }
+    }
+  }
+}
 ```
 
 * my the mcp server I have is based on python
