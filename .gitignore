@@ -1,3 +1,6 @@
+# AnythingLLM runtime data (chat history, keys, vector DB, downloaded models)
+storage/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]

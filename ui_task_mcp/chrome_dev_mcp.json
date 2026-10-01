@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "chrome-remote": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@hisma/server-puppeteer@latest"
+      ],
+      "env": {
+        "PUPPETEER_SKIP_CHROMIUM_DOWNLOAD": "true",
+        "PUPPETEER_REMOTE_URL": "http://host.docker.internal:9222",
+        "PUPPETEER_HEADLESS": "true"
+      }
+    }
+  }
+}
