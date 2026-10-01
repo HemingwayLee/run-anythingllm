@@ -21,6 +21,13 @@ docker-compose -f docker-compose.local.yml up
 docker-compose -f docker-compose.local.mcp.yml up
 ```
 
+* run with Claude (Anthropic) as the chat model instead of Ollama
+```
+cp .env.example .env   # then fill in ANTHROPIC_API_KEY=sk-ant-xxxx
+docker-compose -f docker-compose.local.claude.yml up
+```
+Anthropic doesn't offer embedding models, so this config still uses local Ollama (`nomic-embed-text`) for embeddings — only the chat LLM is swapped to `claude-sonnet-4-6`. `.env` is gitignored; never commit your real API key.
+
 ## About the shared `./storage` volume
 Both compose files bind-mount the same host folder, `./storage`, to `/app/server/storage` in the container. That's intentional:
 
